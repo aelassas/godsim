@@ -2,7 +2,7 @@
 
 # GodSim
 
-GodSim is an interactive simulator that demonstrates classical and modern philosophical arguments for the existence of God using TypeScript and React. Each argument is accompanied by a code simulation, showing the logic behind the proof. The simulator is demonstrates logical reasoning, not empirical proof.
+GodSim is an interactive simulator that demonstrates classical and modern philosophical arguments for the existence of God using TypeScript and React. Each argument is accompanied by a code simulation, showing the logic behind the proof. The simulator demonstrates logical reasoning, not empirical proof.
 
 ## Features
 
