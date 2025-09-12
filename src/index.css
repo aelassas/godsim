@@ -1,0 +1,42 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  font-family: 'Roboto', sans-serif;
+  background:#f0f4f8;
+  color: #1f2937;
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 10px !important;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+input[type="number"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  width: 100px;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
