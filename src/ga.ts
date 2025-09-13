@@ -7,45 +7,49 @@ declare global {
 }
 
 /**
- * Initialize Google Analytics with lazy loading on user interaction.
- * Loads the GA script only after the user interacts (mousemove or touchstart).
+ * Lazy-load Google Analytics (GA4) and return a Promise that resolves when ready.
+ * Automatically waits for the user to interact (mousemove or touchstart).
  *
- * @param id - Google Analytics Measurement ID (e.g., 'G-XXXXXXX').
+ * @param id - GA4 Measurement ID (e.g., 'G-XXXXXXXXXX')
+ * @returns Promise that resolves once GA is initialized
  */
-export function initGA(id: string) {
+export function initGALazy(id: string): Promise<void> {
   if (!id) {
     console.warn('Google Analytics ID is required')
-    return
+    return Promise.resolve()
   }
 
-  let loaded = false
+  return new Promise((resolve) => {
+    let loaded = false
 
-  const loadAnalytics = () => {
-    if (loaded) return
-    loaded = true
+    const loadGA = () => {
+      if (loaded) return
+      loaded = true
 
-    window.dataLayer = window.dataLayer || []
-    window.gtag = function gtag(...args: unknown[]) {
-      window.dataLayer.push(args)
+      window.dataLayer = window.dataLayer || []
+      window.gtag = function gtag(...args: unknown[]) {
+        window.dataLayer.push(args)
+      }
+
+      const script = document.createElement('script')
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
+      script.async = true
+      script.onload = () => {
+        window.gtag?.('js', new Date())
+        window.gtag?.('config', id, { send_page_view: true })
+        resolve()
+      }
+
+      document.head.appendChild(script)
     }
 
-    const script = document.createElement('script')
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
-    script.async = true
-    script.onload = () => {
-      window.gtag?.('js', new Date())
-      window.gtag?.('config', id)
+    const onUserInteract = () => {
+      window.removeEventListener('mousemove', onUserInteract)
+      window.removeEventListener('touchstart', onUserInteract)
+      loadGA()
     }
 
-    document.head.appendChild(script)
-  }
-
-  const startAnalytics = () => {
-    window.removeEventListener('mousemove', startAnalytics)
-    window.removeEventListener('touchstart', startAnalytics)
-    loadAnalytics()
-  }
-
-  window.addEventListener('mousemove', startAnalytics, { once: true, passive: true })
-  window.addEventListener('touchstart', startAnalytics, { once: true, passive: true })
+    window.addEventListener('mousemove', onUserInteract, { once: true, passive: true })
+    window.addEventListener('touchstart', onUserInteract, { once: true, passive: true })
+  })
 }

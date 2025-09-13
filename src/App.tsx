@@ -3,7 +3,7 @@ import { Button, Container, Typography, TextField, Box } from '@mui/material'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-import { initGA } from './ga'
+import { initGALazy } from './ga'
 
 import {
   simulateOntological,
@@ -35,7 +35,21 @@ const App: React.FC = () => {
   const [firstCauseResult, setFirstCauseResult] = useState('')
 
   useEffect(() => {
-    initGA('G-4WW5FK122Y')
+    const init = async () => {
+      try {
+        await initGALazy('G-4WW5FK122Y')
+
+        // Send initial page view after GA is ready
+        window.gtag?.('event', 'page_view', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+        })
+      } catch (err) {
+        console.error('GA initialization failed', err)
+      }
+    }
+
+    init()
   }, [])
 
   const ontologicalCode = `class Being {
