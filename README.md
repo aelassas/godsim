@@ -1,6 +1,6 @@
 [![build](https://github.com/aelassas/godsim/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/build.yml) [![deploy](https://github.com/aelassas/godsim/actions/workflows/deploy.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/deploy.yml) [![live demo](https://img.shields.io/badge/live-demo-brightgreen)](https://godsimulator.github.io/)
 
-> This project is not yet complete. I hope to continue working on it someday.
+> This project is not complete. I hope to work on it someday.
 
 # GodSim
 
