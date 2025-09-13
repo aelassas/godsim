@@ -191,6 +191,23 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
         GodSim - God Proof Simulator
       </Typography>
 
+      {/* Introduction */}
+      <Typography mt={2} mb={2}>
+        Have you ever wondered if it's possible to simulate philosophical arguments using code? That's exactly what inspired me to build <a href="https://github.com/aelassas/godsim" target="_blank" rel="noopener noreferrer">GodSim</a> -
+        an interactive simulator of classical and modern arguments for the existence of God, all implemented with React and TypeScript. Each argument
+        is accompanied by a code simulation, showing the logic behind the proof. Each proof simulates a philosophical argument programmatically.
+        The simulator demonstrates logical reasoning, not empirical proof.
+      </Typography>
+      <Typography mt={1} mb={2}>
+        I wanted to create a fun, hands-on way to explore deep philosophical concepts while practicing modern web development techniques.
+        GodSim lets you experiment with 11 different proofs, see their results in real-time, and even inspect the underlying JavaScript
+        logic behind each argument.
+      </Typography>
+      <Typography mt={1} mb={4}>
+        Whether you're a developer curious about philosophy, or someone interested in computational simulations, GodSim combines reasoning,
+        probability, and interactivity in one project.
+      </Typography>
+
       {/* Ontological Argument */}
       <Box sx={{ mb: 6, p: 3, borderRadius: 2, boxShadow: 3, backgroundColor: '#fff' }}>
         <Typography variant="h5">1. Ontological Argument</Typography>
@@ -407,12 +424,12 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
       <Box sx={{ mb: 6, p: 3, borderRadius: 2, boxShadow: 3, backgroundColor: '#fff' }}>
         <Typography variant="h5">11. First Cause Argument</Typography>
         <Typography mt={1}>
-          Every effect has one or more causes, and if there were an infinite regress or cycles of causes, 
+          Every effect has one or more causes, and if there were an infinite regress or cycles of causes,
           nothing could ultimately exist; yet we observe that things do exist, which makes infinite regress
-          logically impossible. Therefore, there must be a first uncaused cause that is self-existent, necessary, 
-          and independent of anything else—this being is God Almighty, who sustains all contingent things. 
-          In the simulation, we model each entity as an object that can have multiple causes, forming a 
-          tree-like structure; the code recursively checks for cycles, which represent impossible infinite regress, 
+          logically impossible. Therefore, there must be a first uncaused cause that is self-existent, necessary,
+          and independent of anything else—this being is God Almighty, who sustains all contingent things.
+          In the simulation, we model each entity as an object that can have multiple causes, forming a
+          tree-like structure; the code recursively checks for cycles, which represent impossible infinite regress,
           and if no cycles exist and entities are present, it confirms the existence of a first uncaused cause.
         </Typography>
         <Button

@@ -2,7 +2,11 @@
 
 # GodSim
 
-GodSim is an interactive simulator that demonstrates classical and modern philosophical arguments for the existence of God using TypeScript and React. Each argument is accompanied by a code simulation, showing the logic behind the proof. The simulator demonstrates logical reasoning, not empirical proof.
+Have you ever wondered if it's possible to simulate philosophical arguments using code? That's exactly what inspired me to build GodSim - an interactive simulator of classical and modern arguments for the existence of God, all implemented with React and TypeScript. Each argument is accompanied by a code simulation, showing the logic behind the proof. Each proof simulates a philosophical argument programmatically. The simulator demonstrates logical reasoning, not empirical proof.
+
+I wanted to create a fun, hands-on way to explore deep philosophical concepts while practicing modern web development techniques. GodSim lets you experiment with 11 different proofs, see their results in real-time, and even inspect the underlying JavaScript logic behind each argument.
+
+Whether you're a developer curious about philosophy, or someone interested in computational simulations, GodSim combines reasoning, probability, and interactivity in one project.
 
 ## Features
 
@@ -50,7 +54,7 @@ Build the project:
 ```bash
 npm run build
 ```
-
+<!--
 ## How It Works
 
 Each proof simulates a philosophical argument programmatically. For example:
@@ -248,7 +252,7 @@ function simulateFirstCause(chainDepth = 10, branches = 3) {
   return firstCauseExists
 }
 ```
-
+-->
 ## Tech Stack
 
 * Frontend: React, TypeScript, MUI, Vite
