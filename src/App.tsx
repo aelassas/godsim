@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Container, Typography, TextField, Box } from '@mui/material'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+import { initGA } from './ga'
 
 import {
   simulateOntological,
@@ -31,6 +33,10 @@ const App: React.FC = () => {
   const [sustainerResult, setSustainerResult] = useState('')
   const [infiniteRegressResult, setInfiniteRegressResult] = useState('')
   const [firstCauseResult, setFirstCauseResult] = useState('')
+
+  useEffect(() => {
+    initGA('G-4WW5FK122Y')
+  }, [])
 
   const ontologicalCode = `class Being {
   constructor(existsInReality = false) {
