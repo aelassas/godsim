@@ -424,8 +424,7 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
         <Typography mt={1}>
           Every effect has a cause, and if there were an infinite regress of causes, there would be no first cause and nothing could exist;
           yet we observe that things do exist right now, which means an infinite regress is impossible. Therefore, there must be a first uncaused
-          cause that brings all contingent things into existence, a being that is necessary, self-existent, and uncaused—this being is
-          God Almighty, the ultimate source and sustainer of everything.
+          cause that brings all contingent things into existence, a being that is necessary, self-existent, and uncaused.          
         </Typography>
         <Button
           variant="contained"
@@ -447,7 +446,7 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
           Every effect has one or more causes, and if there were an infinite regress or cycles of causes,
           nothing could ultimately exist; yet we observe that things do exist, which makes infinite regress
           logically impossible. Therefore, there must be a first uncaused cause that is self-existent, necessary,
-          and independent of anything else—this being is God Almighty, who sustains all contingent things.
+          and independent of anything else, who sustains all contingent things.
           In the simulation, we model each entity as an object that can have multiple causes, forming a
           tree-like structure; the code recursively checks for cycles, which represent impossible infinite regress,
           and if no cycles exist and entities are present, it confirms the existence of a first uncaused cause.
