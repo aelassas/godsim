@@ -188,7 +188,7 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
   return (
     <Container maxWidth="md" sx={{ mt: 6, mb: 6 }}>
       <Typography variant="h4" align="center" gutterBottom>
-        GodSim - God Proof Simulator
+        GodSim - Exploring God Proofs Through Code
       </Typography>
 
       {/* Introduction */}
