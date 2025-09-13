@@ -1,5 +1,7 @@
 [![build](https://github.com/aelassas/godsim/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/build.yml) [![deploy](https://github.com/aelassas/godsim/actions/workflows/deploy.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/deploy.yml) [![live demo](https://img.shields.io/badge/live-demo-brightgreen)](https://godsimulator.github.io/)
 
+> This project is not yet complete. I hope to continue working on it someday.
+
 # GodSim
 
 Have you ever wondered if it's possible to simulate philosophical arguments using code? That's exactly what inspired me to build GodSim - an interactive simulator of classical and modern arguments for the existence of God, all implemented with React and TypeScript. Each argument is accompanied by a code simulation, showing the logic behind the proof. Each proof simulates a philosophical argument programmatically. The simulator demonstrates logical reasoning, not empirical proof.

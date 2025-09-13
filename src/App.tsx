@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Container, Typography, TextField, Box } from '@mui/material'
+import { Button, Container, Typography, TextField, Box, Alert } from '@mui/material'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
@@ -210,6 +210,11 @@ function simulateFineTuning(count: number = 100000, probability = 1e-4) {
       <Typography variant="h4" align="center" gutterBottom>
         GodSim - Exploring God Proofs Through Code
       </Typography>
+
+      {/* Work-in-progress notice */}
+      <Alert severity="info" style={{ marginTop: '2rem' }}>
+        This project is not complete. I hope to work on it someday.
+      </Alert>
 
       {/* Introduction */}
       <Typography mt={2} mb={2}>
