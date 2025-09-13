@@ -1,4 +1,4 @@
-[![build](https://github.com/aelassas/godsim/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/build.yml) [![deploy](https://github.com/aelassas/godsim/actions/workflows/deploy.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/deploy.yml)
+[![build](https://github.com/aelassas/godsim/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/build.yml) [![deploy](https://github.com/aelassas/godsim/actions/workflows/deploy.yml/badge.svg)](https://github.com/aelassas/godsim/actions/workflows/deploy.yml) [![live demo](https://img.shields.io/badge/live-demo-brightgreen)](https://godsimulator.github.io/)
 
 # GodSim
 
