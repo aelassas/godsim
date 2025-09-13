@@ -80,7 +80,7 @@ function findFirstCause(entity) {
   return entity
 }
 
-function simulateCosmological(depth = 3) {
+function simulateCosmological(depth = 10) {
   if (depth < 1) depth = 1
   let universe = new Cause(null)
   for (let i = 1; i < depth; i++) {
